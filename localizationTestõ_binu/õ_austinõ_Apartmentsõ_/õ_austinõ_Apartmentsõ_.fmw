@@ -23,7 +23,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2018.0.0.0 (20180104 - Build 18241 - WIN64)"
-#!   LAST_SAVE_DATE="2018-01-09T11:17:37"
+#!   LAST_SAVE_DATE="2018-01-09T11:19:30"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -2156,9 +2156,9 @@ FACTORY_DEF * TeeFactory FACTORY_NAME TestFilter_<lt>UNFILTERED<gt> INPUT FEATUR
 FACTORY_DEF * TeeFactory   FACTORY_NAME "TestFilter <lt>UNFILTERED<gt> Transformer Output Nuker"   INPUT FEATURE_TYPE TestFilter_<lt>UNFILTERED<gt>
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_Airports_3ad82379_a744_49da_a7bf_f4ef530ae12c0_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_Airports}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_Airports}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_Airports_3ad82379_a744_49da_a7bf_f4ef530ae12c1_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_Airports}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_Airports}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_Airports    INPUT  FEATURE_TYPE TestFilter_Airports    OUTPUT FEATURE_TYPE AttributeCreator_Airports_OUTPUT         "@Tcl2( AttributeCreator_Airports_3ad82379_a744_49da_a7bf_f4ef530ae12c0_attrSetter {(category,Airports)} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_Airports    INPUT  FEATURE_TYPE TestFilter_Airports    OUTPUT FEATURE_TYPE AttributeCreator_Airports_OUTPUT         "@Tcl2( AttributeCreator_Airports_3ad82379_a744_49da_a7bf_f4ef530ae12c1_attrSetter {(category,Airports)} )"
 
 # -------------------------------------------------------------------------
 
@@ -2176,9 +2176,9 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME KMLStyler_airports    INPUT  FEATURE_TY
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_Shopping_4217e3ef_1c57_4f80_aacc_64b1422994140_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_Shopping}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_Shopping}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_Shopping_4217e3ef_1c57_4f80_aacc_64b1422994141_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_Shopping}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_Shopping}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_Shopping    INPUT  FEATURE_TYPE TestFilter_Shopping    OUTPUT FEATURE_TYPE AttributeCreator_Shopping_OUTPUT         "@Tcl2( AttributeCreator_Shopping_4217e3ef_1c57_4f80_aacc_64b1422994140_attrSetter {(category,Shopping)} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_Shopping    INPUT  FEATURE_TYPE TestFilter_Shopping    OUTPUT FEATURE_TYPE AttributeCreator_Shopping_OUTPUT         "@Tcl2( AttributeCreator_Shopping_4217e3ef_1c57_4f80_aacc_64b1422994141_attrSetter {(category,Shopping)} )"
 
 # -------------------------------------------------------------------------
 
@@ -2196,9 +2196,9 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME KMLStyler_shopping    INPUT  FEATURE_TY
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_School_e74e941b_39d1_4b2d_9977_2565d43a166f0_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_School}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_School}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_School_e74e941b_39d1_4b2d_9977_2565d43a166f1_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_School}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_School}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_School    INPUT  FEATURE_TYPE TestFilter_School    OUTPUT FEATURE_TYPE AttributeCreator_School_OUTPUT         "@Tcl2( AttributeCreator_School_e74e941b_39d1_4b2d_9977_2565d43a166f0_attrSetter {(category,School)} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_School    INPUT  FEATURE_TYPE TestFilter_School    OUTPUT FEATURE_TYPE AttributeCreator_School_OUTPUT         "@Tcl2( AttributeCreator_School_e74e941b_39d1_4b2d_9977_2565d43a166f1_attrSetter {(category,School)} )"
 
 # -------------------------------------------------------------------------
 
@@ -2216,9 +2216,9 @@ FACTORY_DEF * TeeFactory    FACTORY_NAME KMLStyler_school    INPUT  FEATURE_TYPE
 
 # -------------------------------------------------------------------------
 
-Tcl2 proc AttributeCreator_Apartments_1597e683_e3cd_4574_b4fb_8617ecce69c20_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_Apartments}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_Apartments}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
+Tcl2 proc AttributeCreator_Apartments_1597e683_e3cd_4574_b4fb_8617ecce69c21_attrSetter { attrList } {     set attrList [string trim $attrList {()}];     set attrs [split $attrList {,} ];     foreach {attrName attrVal} $attrs {         if { [string match {*<at>*} $attrName] == 1 } {             set attrName [FME_Execute EvaluateExpression {STRING} $attrName {AttributeCreator_Apartments}];         } else {             set attrName [FME_DecodeText $attrName];         };         if { [string match {*<at>*} $attrVal] == 1 } {             set attrVal [FME_Execute EvaluateExpression {STRING_ENCODED} $attrVal {AttributeCreator_Apartments}];         };         FME_SetAttribute $attrName [FME_DecodeText $attrVal];     }; };
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_Apartments    INPUT  FEATURE_TYPE TestFilter_Apartments    OUTPUT FEATURE_TYPE AttributeCreator_Apartments_OUTPUT         "@Tcl2( AttributeCreator_Apartments_1597e683_e3cd_4574_b4fb_8617ecce69c20_attrSetter {(category,Apartments)} )"
+FACTORY_DEF * TeeFactory    FACTORY_NAME AttributeCreator_Apartments    INPUT  FEATURE_TYPE TestFilter_Apartments    OUTPUT FEATURE_TYPE AttributeCreator_Apartments_OUTPUT         "@Tcl2( AttributeCreator_Apartments_1597e683_e3cd_4574_b4fb_8617ecce69c21_attrSetter {(category,Apartments)} )"
 
 # -------------------------------------------------------------------------
 

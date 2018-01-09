@@ -6,7 +6,7 @@
 #!   SOURCE="NONE"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   LAST_SAVE_BUILD="FME(R) 2018.0.0.0 (20171201 - Build 18223 - macosx)"
-#!   LAST_SAVE_DATE="2018-01-09T10:21:05"
+#!   LAST_SAVE_DATE="2018-01-09T10:25:09"
 #!   IGNORE_READER_FAILURE="No"
 #!   DOC_TOP_LEFT="-599 -350.004"
 #!   BEGIN_TCL=""
@@ -478,7 +478,7 @@ FACTORY_DEF * HTTPFactory    FACTORY_NAME HTTPCaller       INPUT  FEATURE_TYPE C
 FACTORY_DEF * TeeFactory   FACTORY_NAME "HTTPCaller Output Output Nuker"   INPUT FEATURE_TYPE HTTPCaller_Output
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * TeeFactory    FACTORY_NAME Logger_Logger    INPUT  FEATURE_TYPE HTTPCaller_<Rejected>    OUTPUT FEATURE_TYPE Logger_LOGGED                  @Log(ENCODED, "Logger:<space>Feature is:","20","20","",INFO,LOG_ONLY,Logger_85be8889_0354_4536_a542_6ff5148c81471)                  @FeatureType(Logger_LOGGED)
+FACTORY_DEF * TeeFactory    FACTORY_NAME Logger_Logger    INPUT  FEATURE_TYPE HTTPCaller_<Rejected>    OUTPUT FEATURE_TYPE Logger_LOGGED                  @Log(ENCODED, "Logger:<space>Feature is:","20","20","",INFO,LOG_ONLY,Logger_85be8889_0354_4536_a542_6ff5148c81472)                  @FeatureType(Logger_LOGGED)
 
 # -------------------------------------------------------------------------
 
